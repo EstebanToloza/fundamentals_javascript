@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de control IF - ClimaBot!</title>
+
+    <script>
+
+        /*alert("Hola! Soy ClimaBot y estoy acá para ayudarte a saber si te conviene ir en cole o caminando al laburo! Para ayudarte, te haré una simple pregunta")
+
+        //V1
+
+        /*let pregunta = (prompt("Llueve?"));
+
+        if(pregunta == "si"){
+            alert("Mejor toma el colectivo!");
+        }
+
+        else{
+            alert("El día está genial para caminar!");
+        }*/
+
+        //V2
+
+        let pregunta = prompt("Cómo está el clima?");
+
+        if(pregunta == "Llueve"){
+            alert("Deberías tomar un taxi");
+        }
+
+        else if(pregunta == "Esta nublado"){
+            let humedad = parseFloat(prompt("Cuál es la humedad ambiente?"))
+            if(humedad > 50){
+                alert("Puedes ir caminando!")};
+                else if(humedad > 70){
+                    alert("Seguramente va a llover, mejor toma un taxi");
+                }
+            }
+        
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
