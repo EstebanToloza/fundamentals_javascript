@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CalcuBot</title>
+    <meta charset="utf8" />
+    <title>CalcuBot!</title>
     <script>
+        
+        alert("Bienvenido Usuario! Soy el CalcuBot. Dime 2 números y te haré múltiples calculos ");
 
-        let primerValor = prompt("Ingrese un primer valor");
-        let segundoValor = prompt("Ingrese un segundo valor");
+        let numeroA = parseFloat(prompt("Seleccione el primer número:"));
+        let numeroB = parseFloat(prompt("Seleccione el segundop número:"));
+        
+        let resultado;
+        
+        resultado = numeroA + numeroB;
+        alert(resultado);
 
-        document.write(("Resultado de suma = ") + (parseFloat(primerValor) + parseFloat(segundoValor)) + (" // "));
-        document.write(("Resultado de multiplicación = ") + (parseFloat(primerValor) * parseFloat(segundoValor)) + (" // "));
-        document.write(("Resultado de resta = ") + (parseFloat(primerValor) - parseFloat(segundoValor)) + (" // "));
-        document.write(("Resultado de división = ") + (parseFloat(primerValor) / parseFloat(segundoValor)) + (" // "));
+        resultado numeroA - numeroB;
+        alert(resultado);
 
-        /*parseFloat es una funcion que al recibir como parametro un string, determina si el primer caracter
-        del string especificado es un numero, y en tal caso devuelve un valor numerico*/ 
+        resultado = numeroA * numeroB;
+        alert(resultado);
 
+        resultado = numeroA / numeroB;
+        alert(resultado);
+    
+    
     </script>
 </head>
-<body>
-    
+<body>    
 </body>
 </html>
