@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+    <script>
+
+        //Arrays. Son un tipo de variable que puede contener más de un valor a la vez.
+
+        const numeros = [10, 20, 30, 40, 50];
+
+        /* console.log(numeros); */
+
+        const meses = new Array("enero", "febrero", "marzo"); //Se puede usar ésta sintaxis pero no es muy común
+
+        /* console.log(meses[1]);  El valor entre corchetes, [**] es el que permite acceder a los diferentes valores del arrays
+        */
+
+        meses[3] = "Abril"; //Ésta es una forma de agregar un valor a un array.
+
+        meses.push("Mayo"); //.push agrega un elemento al final del array. Ésta es la forma en que se recomienda agregar un elemento al arreglo.
+
+        meses.unshift("Mes 0"); //.unshift agrega un elemento al inicio del array.
+
+        meses.pop(); //.pop se utiliza para eliminar el último valor de un array.
+
+        meses.shift(); // .shift se utiliza para eliminar el primer valor de un array.
+
+        meses.splice(0, 2); // .splice elimina valores dentro de un rango. El primer valor indica el punto de partida y el segundo valor la cantidad de valores a eliminar.
+
+        meses.splice(0, 0, "enero", "febrero"); // .splice también se utiliza para agregar valores;
+
+        meses.reverse(); // .reverse reordena el array desde atrás hacia adelante
+
+        console.log(meses);
+
+        let frutas = ["manzana", "naranja", "pera", "durazno"];
+
+        frutas.sort(); // .sort se utiliza para ordenar en orden alfabético
+
+        console.log(frutas);
+
+/* 
+        const arreglo = ["Hola", 10, true, "si", null, undefined]; //Puede haber diferentes tipos de datos en un mismo array
+
+        console.table(arreglo); //console.table muestra los datos por consola en una tabla
+
+        console.log(arreglo.length); //El método .lenght te muestra por consola cuántos elementos hay en un array-
+
+        console.log(Array.isArray(arreglo)); //El método Array.isArray() determina si el valor pasado es un Array.
+ */
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

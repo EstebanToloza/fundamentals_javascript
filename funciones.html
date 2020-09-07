@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funciones!</title>
+    <script>
+
+        //SINTAXIS DE UNA FUNCIÓN
+        //function nombre_funcion (parámetros_separados_por_comas) { ... }
+
+        //FUNCIÓN SIN PARÁMETROS
+        function saludo(){
+            alert("Hola!");
+        }
+        //saludo(); //Así se invoca o llama a la función para que se ejecute. Los paréntesis invocan a la función.
+
+        let resultado_saludo = saludo(); //Al asignarle la función a una variable podemos ver qué es lo que devuelve dicha función. 
+
+        alert(resultado_saludo); 
+
+        //FUNCIÓN CON PARÁMETROS
+        function producto(a, b){     //"a" y "b" son parámetros de la función.
+            return a * b ;
+        }
+
+        let resultado_producto = producto(3, 4);     //Aquí "3" y "4" son argumentos que se corresponden con los parámetros "a" y "b"
+        alert(resultado_producto);
+
+        //FUNCIONES ANÓNIMAS
+
+        /*function (a, b){
+            return ( a * b);
+        }*/ 
+
+        var producto = function(a, b){
+            return ( a * b);
+        }
+
+        let resultado = producto(3 , 6); //La variable puede usarse como si fuera una función. Las funciones anónimas se invocan usando el nombre de la variable que las almacena.
+
+        alert(resultado);
+
+        // EL CONSTRUCTOR FUNCTION()
+
+        let miFuncion = new Function("a", "b", "return a*b");
+
+        let resultado2 = miFuncion(5, 7);
+
+        alert(resultado2);
+
+        //FUNCIONES ANÓNIMAS AUTOINVOCADAS
+
+        (function() {
+            alert("Hola!");
+        }
+        ()); //Para que una función anónima se ejecute debe ir entre paréntesis (toda la función) y llevar paréntesis al final de todo.
+
+        /*PARÁMETROS Y ARGUMENTOS. AMPLIACIÓN
+        - Una función puede tener cero o más parámetros.
+        - Parámetros son los nombnres que aparecen en la definición de una función.
+        - Argumentos son los valores que pasamos a (y que recibe) una función.
+
+        REGLAS DE LOS PARÁMETROS
+
+        - No se especifíca su tipo (si es booleano, string, numérico, etc)
+        - No se verifican los tipos de los argumentos.
+        - No se comprueba el número de los argumentos recibidos
+         */
+
+        // PARÁMETROS POR DEFECTO
+        // Cuando llamamos a una función con menos argumentos de los declarados. Los valores que faltan no están definidos.
+
+        function suma (a, b){
+            if (b == undefined)
+            b = 0;
+            return a + b;
+        }
+
+        var resultado3 = suma (4);
+
+        alert (resultado3); //Ésta función nos devolverá un error a menos que se le asigne algún valor a "b"
+
+        // PARÁMETROS POR EXCESO
+        // Cuando llamamos a una función con más argumentos de los que han sido declarados. Los valores que nos llegan pueden capturarse a través de un objeto (incluído en la función) llamado arguments.
+
+        function valores (){
+            alert ("El valor de argumentos es " + arguments.length)
+            for (let i=0; i < arguments.length; i++){
+                alert ("Argumento " + i + "=" + arguments[i])
+            }
+        }
+
+        valores (4, 6, 8, 2, 9, 15);
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+        
+        /*Funciones que hacen y que no dependen de ningun parámetro
+        function saludar(){
+            alert("Hola! que haceee cheee!");
+            alert("Contate aaalgooo");
+        }
+        //saludar();
+        
+        //Funciones que hacen y que dependen parámetros
+        function saludarPersonalizado(nombre){
+            alert("Hola! " + nombre  + " que haceee cheee!");
+            alert("Contate aaalgooo");
+        }
+        //saludarPersonalizado("Beto");
+        
+        //let palabra = "Beto"
+        //saludarPersonalizado(palabra);
+
+        //funciones que entregan
+        function sumarDosNumeros(numeroA, numeroB){
+            let resultado = parseFloat(numeroA) + parseFloat(numeroB);
+            return resultado;
+        }
+        
+        suma = sumarDosNumeros(10, 25);
+        
+        console.log("La suma dio " + suma);
+
+        suma = sumarDosNumeros(prompt("Numeo A?"), prompt("Numero B?"));
+
+        console.log("La suma dio " + suma);
+ */
+
+/*         let a = 10;
+
+        function sumar20(){
+            a = a + 20;
+        } */
+
+
+    </script>
+</head>
+<body>    
+</body>
+</html>
